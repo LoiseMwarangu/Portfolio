@@ -1,12 +1,277 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-    <a href="https://impressus.herokuapp.com/" target="blank">First Impression</a>  
+<html></html>
+  <body class="main">
+
+      <h1>
+        <a href="https://github.com/LoiseMwarangu"></a>
+        
+    <ul class="blocks-names" >
+      <li class='blocks__name'> Projects</li>
+      <li class='blocks__name'> Skills</li>
+      <li class='blocks__name'>About me</li>
+      <li class='blocks__name'>Home</li>
+      </ul>
+
+      <li class ='blocks-content content'></li>
+        
+        <h2>A list of my Projects</h2>
+        <p>
+            <h1>My Gallery</h1>
+            <p>view project <a href="https://loisegallery2.herokuapp.com/" target="blank">Here</a></p>
+            <i class="fa fa-times" ></i>        <p>
+                <h1>Impress me</h1>
+                <p>view project <a href="https://impressus.herokuapp.com/" target="blank">Here</a></p>
+                <i class="fa fa-times" aria-hidden="true"></i>            <li class ='blocks-content content'></li>
+            <h2> Skills</h2>
+        <ul>
+            <li></li>
+        </ul>
+
+        <i class="fa fa-times" aria-hidden="true"></i>        <li class ='blocks-content__content'></li>
+        <h2 >About me</h2>
+        <i class="fa fa-times" aria-hidden="true"></i>            <li class ='blocks-content__content'></li></p>
+
+       
+        <h2> Home </h2>
+        <p>
+
+                <i class="fa fa-times" aria-hidden="true"></i>        <li class ='blocks-content__content'></li>
+        
+
+ 
 </body>
+<style>
+
+  
+body{
+    background-image: url("https://images.wallpaperscraft.com/image/black_background_red_color_paint_explosion_burst_9844_1920x1080.jpg");
+  font-family: 'Open Sans';
+  font-weight: 400;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+
+}
+.blocks{
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+  .block{
+    will-change: transform;
+    position: relative;
+    height: 20vh;
+    flex: 1;
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+    :nth-child(1){
+      transform-origin: 0% 100%;
+    }
+    :nth-child(2){
+      transform-origin: 25% 100%;
+    }
+    :nth-child(3){
+      transform-origin: 50% 100%;
+    }
+    :nth-child(4){
+      transform-origin: 75% 100%;}
+    :nth-child(5){
+      transform-origin: 100% 100%;
+    }
+    .active{
+      z-index: 2;
+    }
+
+.blocks-content{
+list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+  .__content{
+    will-change: transform, opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 10vw;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    transform: scale(0.9);
+    transition: all .3s .2s ease-out;
+}
+    .active{
+      opacity: 1;
+      transform: scale(1);
+      visibility: visible;
+}
+  .blocks__content-close{
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+  }
+  .blocks__content-close:hover{
+      transform: scale(1.1);
+  }
+  p{
+    font-size: 16px;
+    line-height: 2;
+    max-width: 800px;
+  }
+  h2{
+    padding: 15px 30px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    box-shadow: inset 0 0 0 3px maroon;
+  }
+.blocks-names{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 18px;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all .15s ease-out;
+}
+  .blocks__name{
+    flex: 1;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.main{
+  position: relative;
+  z-index: 1;
+  padding: 3vh 5vw;
+  height: 80vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background: rgba(#edc982, 0.85);
+}
+  h1{
+    margin: 0;
+    font-weight: 300;
+    color: #38C5B9;
+  }
+    a{
+      font-size: 48px;
+    }
+  p{
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 340px;
+    margin: 7px auto;
+  }
+  a{
+    text-decoration: none;
+    color: #38C5B9;
+    font-size: 30px;
+  }
+  .plate{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 380px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;}
+    </style>
+
+<script>
+var block = $('.blocks__block')
+var bname = $('.blocks__name')
+var content = $('.blocks-content__content')
+var closeBtn = $('.blocks__content-close')
+var wHeight = $(window).outerHeight()
+var wWidth = $(window).outerWidth()
+var bHeight = block.outerHeight()
+var bWidth = block.outerWidth()
+var xVal = Math.round(wWidth / bWidth) + 0.03
+var yVal = wHeight / bHeight + 0.03
+
+expand =>
+  num = $(this).index()
+  aBlock = block.eq(num)
+  if !block.hasClass('active')
+    bname.css 'opacity', '0'
+    aBlock.css
+      'transform': 'scale(' + xVal + ',' + yVal + ')'
+      '-webkit-transform': 'scale(' + xVal + ',' + yVal + ')'
+    aBlock.addClass 'active'
+    openContent num
+  return
+
+openContent = (num) =>
+  content.css
+    'transition': 'all 0.3s 0.4s ease-out'
+    '-webkit-transition': 'all 0.3s 0.4s ease-out'
+  aContent = content.eq(num)
+  aContent.addClass 'active'
+  return
+
+closeContent = ->
+  bname.css 'opacity', '1'
+  content.css
+    'transition': 'all 0.1s 0 ease-out'
+    '-webkit-transition': 'all 0.1s 0 ease-out'
+  block.css
+    'transform': 'scale(1)'
+    '-webkit-transform': 'scale(1)'
+  block.removeClass 'active'
+  content.removeClass 'active'
+  return
+
+updateValues = ->
+  `var yVal`
+  `var xVal`
+  `var bWidth`
+  `var bHeight`
+  `var wWidth`
+  `var wHeight`
+  if block.hasClass('active')
+    aBlock = $('.blocks__block.active')
+    wHeight = $(window).height()
+    wWidth = $(window).width()
+    bHeight = block.height()
+    bWidth = block.width()
+    xVal = Math.round(wWidth / bWidth) + 0.03
+    yVal = wHeight / bHeight + 0.03
+    aBlock.css
+      'transform': 'scale(' + xVal + ',' + yVal + ')'
+      '-webkit-transform': 'scale(' + xVal + ',' + yVal + ')'
+  return
+
+$(window).on 'resize', updateValues
+bname.on 'click', expand
+closeBtn.on 'click', closeContent
+</script>
 </html>
